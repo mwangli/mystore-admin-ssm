@@ -56,7 +56,7 @@ public class GoodsController {
             //参数regex其实代表“正则表达式”，这是一种用来描述规则的规范。
             //如果希望用英文句点进行切分，那么参数必须写成"\\."，这是一个特例。
             String[] splits = imageFile.getOriginalFilename().split("\\.");
-            String path = "F:\\goods_images\\";
+            String path = "goods_images";
             if (splits.length > 1) {
                 String name = UUID.randomUUID().toString().replaceAll("-", "") + "." + splits[1];
                 imageFile.transferTo(new File(path + name));

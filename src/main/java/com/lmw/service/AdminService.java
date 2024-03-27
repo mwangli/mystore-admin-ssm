@@ -8,7 +8,7 @@ import java.util.List;
 @Transactional
 public interface AdminService {
 
-    List<Admin> login(Admin admin);
+   Admin login(Admin admin);
 
     List<Admin> getAllAdmin();
 }

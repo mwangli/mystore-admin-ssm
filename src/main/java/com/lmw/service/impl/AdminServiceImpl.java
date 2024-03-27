@@ -15,7 +15,7 @@ public class AdminServiceImpl implements AdminService {
     private AdminMapper adminMapper;
 
     @Override
-    public List<Admin> login(Admin admin) {
+    public Admin login(Admin admin) {
         return adminMapper.login(admin);
     }
 

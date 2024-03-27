@@ -19,7 +19,7 @@ public class AdminController extends DispatcherServlet {
 
     @RequestMapping("/login.do")
     public String login(Model model, Admin admin, HttpSession session) {
-        Admin ad = adminServiceImpl.login(admin).get(0);
+        Admin ad = adminServiceImpl.login(admin);
         if (ad == null) {
             model.addAttribute("error", "用户名或密码错误");
             return "index.jsp";

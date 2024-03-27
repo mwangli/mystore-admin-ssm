@@ -15,7 +15,7 @@ public interface GoodsMapper {
     @Select("select count(*) from goods")
     Integer getCount();
 
-    @Insert("insert into goods values(#{gid},#{name},#{price},#{image},#{description},#{hot},#{cid})")
+    @Insert("insert into goods(name,price,image,description,hot,cid) values(#{name},#{price},#{image},#{description},#{hot},#{cid})")
     void addGoods(Goods goods);
 
     @Delete("delete from goods where gid = #{gid}")

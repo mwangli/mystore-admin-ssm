@@ -11,7 +11,7 @@ import java.util.List;
 public interface AdminMapper{
 
     @Select("select * from admin where name = #{name} and password = #{password}")
-    List<Admin> login(Admin admin);
+    Admin login(Admin admin);
 
 
     @Select("select * from admin")
